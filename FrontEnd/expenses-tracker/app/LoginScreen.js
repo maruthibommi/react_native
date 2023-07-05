@@ -18,6 +18,7 @@ const LoginScreen = () => {
 
       if (response.status === 200) {
         setMessage('Login successful.');
+        navigation.navigate("HomePage")
         // Handle successful login, e.g., navigate to the home screen.
       }
     } catch (error) {

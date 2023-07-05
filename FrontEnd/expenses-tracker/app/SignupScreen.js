@@ -60,6 +60,36 @@ const SignupScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 24,
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 16,
+    paddingHorizontal: 12,
+    width: '80%',
+  },
+  button: {
+    backgroundColor: '#007BFF',
+    padding: 12,
+    borderRadius: 6,
+    alignItems: 'center',
+    width: '80%',
+    marginBottom: 16,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+  },
+  message: {
+    fontSize: 16,
+    color: 'red',
+  },
   
 });
 
