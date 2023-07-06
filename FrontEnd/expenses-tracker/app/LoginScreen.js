@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 
+
 const BASE_URL = 'http://localhost:5000'; // Replace with your backend server address
+
+if (Platform.OS == 'android'){
+  BASE_URL = 'http://10.0.2.2:5000'
+}
 
 const LoginScreen = () => {
   const [username, setUsername] = useState('');
@@ -12,6 +17,7 @@ const LoginScreen = () => {
   const navigation = useNavigation()
 
   const handleLogin = async () => {
+    console.log(BASE_URL)
     try {
       const response = await axios.post(`${BASE_URL}/api/login`, {
         username,
@@ -20,7 +26,7 @@ const LoginScreen = () => {
 
       if (response.status === 200) {
         setMessage('Login successful.');
-        navigation.navigate("HomePage")
+        navigation.navigate("HomePage",{ username })
         // Handle successful login, e.g., navigate to the home screen.
       }
     } catch (error) {
