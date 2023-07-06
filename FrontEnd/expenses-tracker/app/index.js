@@ -1,5 +1,6 @@
 // App.js
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './LoginScreen';
 import SignupScreen from './SignupScreen';
@@ -18,7 +19,7 @@ const App = () => {
         <Stack.Screen name="HomePage" component={HomePage} />
         {/* Add other screens and navigations as needed */}
       </Stack.Navigator>
-    
+   
   );
 };
 

@@ -39,7 +39,7 @@ app.post('/api/users', (req, res) => {
     }
   })
 
-  app.post('/api/forgot-password', (req, res) => {
+  app.post('/api/forgotpassword', (req, res) => {
     const { username, password } = req.body;
   
     // Find the user by username

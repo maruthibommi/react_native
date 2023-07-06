@@ -7,7 +7,7 @@ const ForgotPasswordScreen = () => {
   const [message, setMessage] = useState('');
 
   const handleResetPassword = () => {
-    fetch('http://localhost:5000/api/forgot-password', {
+    fetch('http://localhost:5000/api/forgotpassword', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
