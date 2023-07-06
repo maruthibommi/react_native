@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import axios from 'axios';
+import { useNavigation } from '@react-navigation/native';
 
 const BASE_URL = 'http://localhost:5000'; // Replace with your backend server address
 
@@ -8,6 +9,7 @@ const LoginScreen = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigation = useNavigation()
 
   const handleLogin = async () => {
     try {
