@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View,Platform , Text, TextInput, TouchableOpacity, StyleSheet, DatePickerAndroid} from 'react-native';
 import axios from 'axios';
-import DateTimePicker from '@react-native-community/datetimepicker';
 
 
 
